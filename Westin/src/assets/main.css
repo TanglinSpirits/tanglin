@@ -1,0 +1,224 @@
+:root {
+  --color1: #e65cb3;
+  --color2: #ab07d9;
+  --color3: #3c308c;
+  --color4: #023859;
+  --color5: #04bfbf;
+  --color6: #ff8000;
+  --color7: #ff87bc;
+  --color8: #ce0218;
+  --color9: #3fcc9d;
+  --color10: #229971;
+  --color11: #5ce1e6;
+}
+
+@font-face {
+  font-family: "FSKim";
+  src: url("@/assets/Fonts/FSKim-Regular.otf");
+}
+
+@font-face {
+  font-family: "Benton Sans";
+  src: url("@/assets/Fonts/Benton Sans Book.otf");
+}
+
+@font-face {
+  font-family: "FSKim Bold";
+  src: url("@/assets/Fonts/FSKim-Bold.ttf");
+}
+
+@font-face {
+  font-family: "FSKim Italic";
+  src: url("@/assets/Fonts/FSKim-MediumItalic.otf");
+}
+
+html,
+body {
+  /* position: fixed; */
+  /* overflow-y: scroll; */
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  width: 100dvw;
+  background-color: black;
+  font-family: 'Benton Sans', 'sans-serif';
+}
+
+.button {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  position: absolute; /* Fixed position keeps it anchored relative to the viewport */
+  bottom: 6vh; /* Distance from the bottom of the page */
+  left: 0; /* Ensures it spans the entire width */
+  margin-top: 0; /* Remove the margin-top to avoid additional space */
+}
+
+.startBtn {
+  font-family: "FSKim Bold", sans-serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  background-color: var(--color4);
+  color: white;
+  width: 50%;
+  max-width: 300px;
+  padding: 10px 0;
+}
+
+.startBtn:hover {
+  background-color: var(--color5);
+  color: var(--color4);
+}
+
+/* quiz start */
+.quizStart {
+  background-color: #0b0b0b;
+  background-image: linear-gradient(black, transparent);
+}
+
+@media (max-width: 374px) {
+  .description {
+    font-size: 0.55rem;
+  }
+}
+
+
+.retryBtn:hover {
+  background-color: var(--color5);
+  color: var(--color4);
+}
+
+/* Background Image Layer */
+.bgImage {
+  width: 100%;
+  height: 30vh; /* Adjust height as needed */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0 0;
+}
+
+/* Adjust prompt container */
+.prompt-container {
+  position: relative;
+  height: 150px;
+  width: 100%;
+  overflow: hidden; 
+}
+
+/* Ensure prompt positioning is consistent */
+.prompt {
+  position: absolute;
+  width: 100%;
+  max-width: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* glass effect */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(25px);
+  box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.1),
+    inset 0 0 20px rgba(92, 225, 230, 0.05);
+}
+
+/* Update option transitions to match timing */
+.options-enter-active,
+.options-leave-active {
+  transition: all 0.8s ease;
+}
+.options-enter-from {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.options-leave-to {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+
+/* Option container positioning */
+.option-container {
+  position: relative;
+  margin-top: 10vh;
+}
+
+/* Ensure smooth button state changes */
+.option button {
+  transition: opacity 1s ease;
+}
+
+.option button[disabled] {
+  opacity: 1;
+}
+
+/* Question Transition End */
+.newImg {
+    background-color: #0b0b0b;
+    background-image: 
+      linear-gradient(0deg, rgba(11,11,11,0.95) 0%, rgba(11,11,11,0.8) 100%),
+      url("./images/startBg.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+  }
+
+/* Spinner */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #ffffff;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* End Spinner */
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@media (max-width: 992px) {
+  .btn.no-hover:hover,
+  .btn.no-hover:focus,
+  .btn.no-hover:active {
+    /* Match the default button styles */
+    background-color: var(--bs-btn-bg);
+    border-color: var(--bs-btn-border-color);
+    color: var(--bs-btn-color);
+    
+    /* Remove any box-shadow or outline on focus */
+    box-shadow: none;
+    outline: none;
+  }
+}

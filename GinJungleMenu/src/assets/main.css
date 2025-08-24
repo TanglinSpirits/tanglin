@@ -1,0 +1,131 @@
+:root {
+  --green: #00b398;
+  --yellow: #f0e87b;
+}
+
+@font-face {
+  font-family: 'FSKim';
+  src: url('@/assets/fonts/FSKim-Regular.otf');
+}
+
+@font-face {
+  font-family: 'FSKim Bold';
+  src: url('@/assets/fonts/FSKim-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Benton Sans';
+  src: url('@/assets/fonts/Benton Sans Regular.otf');
+}
+
+@font-face {
+  font-family: 'Impact';
+  src: url('@/assets/marriott/Fonts/impact.ttf');
+}
+
+@font-face {
+  font-family: 'arial';
+  src: url('@/assets/marriott/Fonts/arial.ttf');
+}
+
+@font-face {
+  font-family: 'arialBold';
+  src: url('@/assets/marriott/Fonts/arialbd.ttf');
+}
+
+html,
+body {
+  position: fixed;
+  /* overflow-y: scroll; */
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  font-family: 'Benton Sans', 'sans-serif';
+}
+
+.app-container {
+  min-height: 100dvh;
+  width: 100dvw;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Green overlay with proper positioning */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 25dvh; /* Increased height to cover half of tiger */
+  background-color: var(--green);
+  opacity: 0.85;
+  z-index: 0;
+  margin: 0 auto;
+}
+
+.custom-shape-divider-top-1745957112 {
+  position: absolute;
+  top: 95%;
+  left: 0;
+  width: 100dvw;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1745957112 svg {
+  position: relative;
+  display: block;
+  width: calc(153% + 1.3px);
+  height: 299px;
+}
+
+.custom-shape-divider-top-1745957112 .shape-fill {
+  fill: #00b398;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-top-1745957112 svg {
+    width: calc(146% + 1.3px);
+    height: 120px;
+  }
+}
+
+/* Spinner */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #ffffff;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
