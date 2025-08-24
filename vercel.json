@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "GinJungleMenu/package.json",
+      "use": "@vercel/static-build"
+    },
+    {
+      "src": "Westin/package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/westin/assets/(.*)",
+      "dest": "/Westin/assets/$1"
+    },
+    {
+      "src": "/westin/favicon/(.*)",
+      "dest": "/Westin/favicon/$1"
+    },
+    {
+      "src": "/westin.*",
+      "dest": "/Westin/index.html"
+    },
+    {
+      "src": "/favicon/(.*)",
+      "dest": "/GinJungleMenu/favicon/$1"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/GinJungleMenu/assets/$1"
+    },
+    {
+      "src": "/_vercel/insights/(.*)",
+      "dest": "/_vercel/insights/$1"
+    },
+{
+  "src": "/favicon.ico",
+  "dest": "/GinJungleMenu/favicon/favicon.ico" 
+},
+    {
+      "src": "/(.*)",
+      "dest": "/GinJungleMenu/index.html"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "tanglin",
+  "private": true,
+  "workspaces": [
+    "GinJungleMenu",
+    "Westin"
+  ],
+  "devDependencies": {
+    "vercel": "^46.0.2"
+  }
+}
