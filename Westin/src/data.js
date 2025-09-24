@@ -1,7 +1,7 @@
 import { ref } from 'vue';
 
-import tanglinLogo from '@/assets/images/tanglin logo pure white.png';
-import westinLogo from '@/assets/images/Westin Logo (White).png';
+import tanglinLogo from '@/assets/images/tanglin-logo-pure-white.png';
+import westinLogo from '@/assets/images/Westin-Logo-White.png';
 import raceBg from '@/assets/images/startBg.png';
 
 //Fonts
@@ -13,18 +13,18 @@ import FSKimItalic from "@/assets/Fonts/FSKim-MediumItalic.otf"
 // Flags
 import mercedesFlag from '@/assets/images/Results/Flags/mercedes.png';
 import ferrariFlag from '@/assets/images/Results/Flags/ferrari.png';
-import astonMartinFlag from '@/assets/images/Results/Flags/Aston Martin.png'
-import redBullFlag from '@/assets/images/Results/Flags/Red Bull.png'
+import astonMartinFlag from '@/assets/images/Results/Flags/Aston-Martin.png'
+import redBullFlag from '@/assets/images/Results/Flags/Red-Bull.png'
 import alpineFlag from '@/assets/images/Results/Flags/Alpine.png'
 import mcLarenFlag from '@/assets/images/Results/Flags/McLaren.png'  
 
 // Drinks
-import orchidCocktail from '@/assets/images/Results/Drinks/Orchid Cocktail.png'
-import negroniDrink from '@/assets/images/Results/Drinks/Chocolate Negroni.png';
-import ginAndSonic from '@/assets/images/Results/Drinks/Gin & Sonic.png'
-import mochaMartini from '@/assets/images/Results/Drinks/Mocha Martini.png'
-import ginBasilSmash from '@/assets/images/Results/Drinks/Gin Basil Smash.png'
-import westinSling from '@/assets/images/Results/Drinks/Westin Sling.png'
+import orchidCocktail from '@/assets/images/Results/Drinks/Orchid-Cocktail.png'
+import negroniDrink from '@/assets/images/Results/Drinks/Chocolate-Negroni.png';
+import ginAndSonic from '@/assets/images/Results/Drinks/Gin-Sonic.png'
+import mochaMartini from '@/assets/images/Results/Drinks/Mocha-Martini.png'
+import ginBasilSmash from '@/assets/images/Results/Drinks/Gin-Basil-Smash.png'
+import westinSling from '@/assets/images/Results/Drinks/Westin-Sling.png'
 
 
 export const questions =  ref([

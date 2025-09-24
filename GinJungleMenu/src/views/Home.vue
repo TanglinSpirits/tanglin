@@ -47,7 +47,7 @@ const imageUrls = [
 
 const fontUrls = [
   { url: new URL('../assets/fonts/FSKim-Bold.ttf', import.meta.url).href, type: 'font/ttf' },
-  { url: new URL('../assets/fonts/Benton Sans Regular.otf', import.meta.url).href, type: 'font/otf' },
+  { url: new URL('../assets/fonts/Benton-Sans-Regular.otf', import.meta.url).href, type: 'font/otf' },
 ];
 
 // --- Configure useHead ---

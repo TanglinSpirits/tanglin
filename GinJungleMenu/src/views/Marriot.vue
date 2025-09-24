@@ -7,12 +7,12 @@
     <div class="background-container"></div>
     <div class="page-container">
       <div class="title-section">
-        <img src="@/assets/marriott/Screen 1 Title.png" alt="At the Crossroads" class="title-image" />
+        <img src="@/assets/marriott/Screen-1-Title.png" alt="At the Crossroads" class="title-image" />
       </div>
 
       <div class="sign-section">
         <div class="sign-container">
-          <img src="@/assets/marriott/Full Stand.png" alt="Sign with Text" class="sign-image" />
+          <img src="@/assets/marriott/Full-Stand.png" alt="Sign with Text" class="sign-image" />
 
           <div class="clickable-element" @click="handleClick">
             <button class="btn btn-outline-light rounded-pill" style="--bs-btn-hover-bg: none; --bs-btn-hover-color: white;">
@@ -38,35 +38,35 @@ const loading = ref(true)
 
 // Marriott Assets
 const marriottImageUrls = [
-  new URL('../assets/marriott/Screen 1 Title.png', import.meta.url).href,
-  new URL('../assets/marriott/Full Stand.png', import.meta.url).href,
-  new URL('../assets/marriott/Screen 1.png', import.meta.url).href,
+  new URL('../assets/marriott/Screen-1-Title.png', import.meta.url).href,
+  new URL('../assets/marriott/Full-Stand.png', import.meta.url).href,
+  new URL('../assets/marriott/Screen-1.png', import.meta.url).href,
 ];
 
 // Quiz Assets (copied from Quiz.vue)
 const quizImageUrls = [
   // Step images
-  new URL('../assets/marriott/Screen 2 & Screen 8.png', import.meta.url).href,
-  new URL('../assets/marriott/Screen 2 Door.png', import.meta.url).href,
-  new URL('../assets/marriott/Screen 3.png', import.meta.url).href,
-  new URL('../assets/marriott/Screen 3 Arrow.png', import.meta.url).href,
-  new URL('../assets/marriott/Screen 4 & 7.png', import.meta.url).href,
-  new URL('../assets/marriott/Screen 4 Mirror.png', import.meta.url).href,
-  new URL('../assets/marriott/Screen 5.png', import.meta.url).href,
-  new URL('../assets/marriott/Screen 5 door.png', import.meta.url).href,
-  new URL('../assets/marriott/Screen 6.png', import.meta.url).href,
-  new URL('../assets/marriott/Screen 6 Menu Book.png', import.meta.url).href,
-  new URL('../assets/marriott/Screen 7 Potion.png', import.meta.url).href,
-  new URL('../assets/marriott/Screen 8 Cocktail.png', import.meta.url).href,
+  new URL('../assets/marriott/Screen2-Screen8.png', import.meta.url).href,
+  new URL('../assets/marriott/Screen2-Door.png', import.meta.url).href,
+  new URL('../assets/marriott/Screen3.png', import.meta.url).href,
+  new URL('../assets/marriott/Screen3-Arrow.png', import.meta.url).href,
+  new URL('../assets/marriott/Screen4-7.png', import.meta.url).href,
+  new URL('../assets/marriott/Screen4-Mirror.png', import.meta.url).href,
+  new URL('../assets/marriott/Screen5.png', import.meta.url).href,
+  new URL('../assets/marriott/Screen5-door.png', import.meta.url).href,
+  new URL('../assets/marriott/Screen6.png', import.meta.url).href,
+  new URL('../assets/marriott/Screen6-MenuBook.png', import.meta.url).href,
+  new URL('../assets/marriott/Screen7-Potion.png', import.meta.url).href,
+  new URL('../assets/marriott/Screen8-Cocktail.png', import.meta.url).href,
 
   // Result images
-  new URL('../assets/marriott/Chocolate Negroni Text.png', import.meta.url).href,
-  new URL('../assets/marriott/Chocolate negroni image.png', import.meta.url).href,
-  new URL('../assets/marriott/Gin & Tonic Text.png', import.meta.url).href,
-  new URL('../assets/marriott/Gin & Tonic Image.png', import.meta.url).href,
-  new URL('../assets/marriott/Crossroad Punch Text.png', import.meta.url).href,
-  new URL('../assets/marriott/Crossroad Punch Image.png', import.meta.url).href,
-  new URL('../assets/marriott/Result Screen.png', import.meta.url).href,
+  new URL('../assets/marriott/Chocolate-Negroni-Text.png', import.meta.url).href,
+  new URL('../assets/marriott/Chocolate-negroni-image.png', import.meta.url).href,
+  new URL('../assets/marriott/Gin-Tonic-Text.png', import.meta.url).href,
+  new URL('../assets/marriott/Gin-Tonic-Image.png', import.meta.url).href,
+  new URL('../assets/marriott/Crossroad-Punch-Text.png', import.meta.url).href,
+  new URL('../assets/marriott/Crossroad-Punch-Image.png', import.meta.url).href,
+  new URL('../assets/marriott/Result-Screen.png', import.meta.url).href,
 ];
 
 // Font Assets
@@ -124,7 +124,7 @@ const handleClick = () => {
   position: fixed;
   width: 100%;
   min-height: 100dvh;
-  background-image: url('@/assets/marriott/Screen 1.png');
+  background-image: url('@/assets/marriott/Screen-1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

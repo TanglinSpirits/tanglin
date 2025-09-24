@@ -8,6 +8,10 @@
     {
       "src": "Westin/package.json",
       "use": "@vercel/static-build"
+    },
+    {
+      "src": "Cellarbrations/package.json",
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
@@ -24,6 +28,18 @@
       "dest": "/Westin/index.html"
     },
     {
+      "src": "/cellarbrations/assets/(.*)",
+      "dest": "/Cellarbrations/assets/$1"
+    },
+    {
+      "src": "/cellarbrations/favicon/(.*)",
+      "dest": "/Cellarbrations/favicon/$1"
+    },
+    {
+      "src": "/cellarbrations.*",
+      "dest": "/Cellarbrations/index.html"
+    },
+    {
       "src": "/favicon/(.*)",
       "dest": "/GinJungleMenu/favicon/$1"
     },
@@ -35,10 +51,10 @@
       "src": "/_vercel/insights/(.*)",
       "dest": "/_vercel/insights/$1"
     },
-{
-  "src": "/favicon.ico",
-  "dest": "/GinJungleMenu/favicon/favicon.ico" 
-},
+    {
+      "src": "/favicon.ico",
+      "dest": "/GinJungleMenu/favicon/favicon.ico" 
+    },
     {
       "src": "/(.*)",
       "dest": "/GinJungleMenu/index.html"

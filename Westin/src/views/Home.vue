@@ -1,9 +1,9 @@
 <template>
     <div class="start-container">
             <div class="tanglinLogo">
-                <img src="@/assets/images/tanglin logo pure white.png" alt="" style="width: 100px;">
+                <img src="@/assets/images/tanglin-logo-pure-white.png" alt="" style="width: 100px;">
                 <span>X</span>
-                <img src="@/assets/images/Westin Logo (White).png" alt="" style="width: 100px;">
+                <img src="@/assets/images/Westin-Logo-White.png" alt="" style="width: 100px;">
             </div>
 
             <div class="mainText">

@@ -1,0 +1,29 @@
+html,
+body {
+  /* position: fixed; */
+  /* overflow-y: scroll; */
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  width: 100dvw;
+  background-color: black;
+  font-family: 'Benton Sans', 'sans-serif';
+}
+
+@media (max-width: 992px) {
+  .btn.no-hover:hover,
+  .btn.no-hover:focus,
+  .btn.no-hover:active {
+    /* Match the default button styles */
+    background-color: var(--bs-btn-bg);
+    border-color: var(--bs-btn-border-color);
+    color: var(--bs-btn-color);
+    
+    /* Remove any box-shadow or outline on focus */
+    box-shadow: none;
+    outline: none;
+  }
+}

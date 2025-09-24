@@ -79,15 +79,15 @@ const currentStepIndex = computed(() => parseInt(route.params.step || '0', 10));
 const quizSteps = ref([
   {
     type: 'start',
-    bgImage: new URL('../assets/marriott/Screen 2 & Screen 8.png', import.meta.url).href,
-    image: new URL('../assets/marriott/Screen 2 Door.png', import.meta.url).href,
+    bgImage: new URL('../assets/marriott/Screen2-Screen8.png', import.meta.url).href,
+    image: new URL('../assets/marriott/Screen2-Door.png', import.meta.url).href,
     narrative: `Tonight, you've slipped into a world between worlds - where every choice shapes your path.\n\n To find your way back, you'll walk a path, each step revealing something deeper about who you are...\n\nAnd discover the spirit that matches you. \nYour perfect drink companion.`,
     buttonText: `Let's Go!`,
   },
   {
     type: 'question',
-    bgImage: new URL('../assets/marriott/Screen 3.png', import.meta.url).href,
-    image: new URL('../assets/marriott/Screen 3 Arrow.png', import.meta.url).href,
+    bgImage: new URL('../assets/marriott/Screen3.png', import.meta.url).href,
+    image: new URL('../assets/marriott/Screen3-Arrow.png', import.meta.url).href,
     narrative: `Before you lie three paths. They twist off in different directions - mysterious, inviting and unlike anything you've seen.`,
     question: 'Which path will you walk?',
     choices: [
@@ -102,8 +102,8 @@ const quizSteps = ref([
   },
   {
     type: 'question',
-    bgImage: new URL('../assets/marriott/Screen 4 & 7.png', import.meta.url).href,
-    image: new URL('../assets/marriott/Screen 4 Mirror.png', import.meta.url).href,
+    bgImage: new URL('../assets/marriott/Screen4-7.png', import.meta.url).href,
+    image: new URL('../assets/marriott/Screen4-Mirror.png', import.meta.url).href,
     narrative: `Halfway through your path, you encounter an ancient mirror that speaks, "Only by seeing yourself clearly can you move forward".`,
     question: 'What do you see?',
     choices: [
@@ -126,8 +126,8 @@ const quizSteps = ref([
   },
   {
     type: 'question',
-    bgImage: new URL('../assets/marriott/Screen 5.png', import.meta.url).href,
-    image: new URL('../assets/marriott/Screen 5 door.png', import.meta.url).href,
+    bgImage: new URL('../assets/marriott/Screen5.png', import.meta.url).href,
+    image: new URL('../assets/marriott/Screen5-door.png', import.meta.url).href,
     narrative: 'The mirror fades. Ahead, three doors stand in front of you...\n\n Each oddly shaped.',
     question: 'Which do you choose to enter?',
     choices: [
@@ -150,8 +150,8 @@ const quizSteps = ref([
   },
   {
     type: 'question',
-    bgImage: new URL('../assets/marriott/Screen 6.png', import.meta.url).href,
-    image: new URL('../assets/marriott/Screen 6 Menu Book.png', import.meta.url).href,
+    bgImage: new URL('../assets/marriott/Screen6.png', import.meta.url).href,
+    image: new URL('../assets/marriott/Screen6-MenuBook.png', import.meta.url).href,
     narrative: `The door creaks open... and it's a bar!\n\n Not quite the kind you're used to. The walls shimmer. Menus float in mid-air. Drinks pour themselves with a flicker of light. Your stomach suddenly growls after hours on your feet.`,
     question: 'What will you order to eat?',
     choices: [
@@ -162,8 +162,8 @@ const quizSteps = ref([
   },
   {
     type: 'question',
-    bgImage: new URL('../assets/marriott/Screen 4 & 7.png', import.meta.url).href,
-    image: new URL('../assets/marriott/Screen 7 Potion.png', import.meta.url).href,
+    bgImage: new URL('../assets/marriott/Screen4-7.png', import.meta.url).href,
+    image: new URL('../assets/marriott/Screen7-Potion.png', import.meta.url).href,
     narrative: `A man with glowing eyes appears behind the bar. "I'm the Spirit Keeper, Guardian of liquid destinies" he says.\n\n He places three glowing potions in front of you, each swirling with magic. "Choose wisely. The right spirit will lead you home."`,
     question: `Which one will you drink?`,
     choices: [
@@ -186,8 +186,8 @@ const quizSteps = ref([
   },
   {
     type: 'end',
-    bgImage: new URL('../assets/marriott/Screen 2 & Screen 8.png', import.meta.url).href,
-    image: new URL('../assets/marriott/Screen 8 Cocktail.png', import.meta.url).href,
+    bgImage: new URL('../assets/marriott/Screen2-Screen8.png', import.meta.url).href,
+    image: new URL('../assets/marriott/Screen8-Cocktail.png', import.meta.url).href,
     narrative: `As you sip, you hear the bartender whisper:\n"You chose well."\n\nYou wake up back in your room.\nEverything looks the same... but something feels different. You glance down - there's a drink in your hand.\n\nIt's not just any cocktail. It's yours. Your spirit.`,
     buttonText: 'See My Drink',
   },
@@ -197,24 +197,24 @@ const quizSteps = ref([
 const resultsData = {
   CN: {
     name: 'Chocolate Negroni',
-    titleImage: new URL('../assets/marriott/Chocolate Negroni Text.png', import.meta.url).href,
-    image: new URL('../assets/marriott/Chocolate negroni image.png', import.meta.url).href,
+    titleImage: new URL('../assets/marriott/Chocolate-Negroni-Text.png', import.meta.url).href,
+    image: new URL('../assets/marriott/Chocolate-negroni-image.png', import.meta.url).href,
     heading: `“Bold and bittersweet, just like the stories you hold.”`,
     description: `You may seem calm on the outside, but inside, you feel things deeply — you're sharp, passionate, and fully committed to what you care about, whether it's love, work, or your purpose. You don’t do anything halfway. But that kind of intensity can be heavy. You take on a lot, and sometimes, it’s hard to let go.`,
     reminder: ' It’s okay to pause.\nYou deserve to rest and rest, to not always be chasing the next thing.',
   },
   GnT: {
     name: 'Singapore Gin & Tonic',
-    titleImage: new URL('../assets/marriott/Gin & Tonic Text.png', import.meta.url).href,
-    image: new URL('../assets/marriott/Gin & Tonic Image.png', import.meta.url).href,
+    titleImage: new URL('../assets/marriott/Gin-Tonic-Text.png', import.meta.url).href,
+    image: new URL('../assets/marriott/Gin-Tonic-Image.png', import.meta.url).href,
     heading: `“Bright, grounded, and quietly complex - just like you.”`,
     description: `You stay calm and clear-headed, even when things get noisy or confusing. You like to keep things balanced and peaceful — but because you’re often the one holding everything together, taking big risks can feel scary.`,
     reminder: ' Not every path will be clear. Sometimes, following your instincts matters more than having everything figured out. You don’t need to know it all, just be brave enough to start.',
   },
   CP: {
     name: 'Crossroad Punch',
-    titleImage: new URL('../assets/marriott/Crossroad Punch Text.png', import.meta.url).href,
-    image: new URL('../assets/marriott/Crossroad Punch Image.png', import.meta.url).href,
+    titleImage: new URL('../assets/marriott/Crossroad-Punch-Text.png', import.meta.url).href,
+    image: new URL('../assets/marriott/Crossroad-Punch-Image.png', import.meta.url).href,
     heading: `“Sweet, unexpected, and wonderfully wild - just like you.”`,
     description: `You’re quick, curious, and full of life. You go with your gut, love new adventures, and aren’t afraid to be a little different. But moving fast and saying yes all the time l can make it easy to lose your way.`,
     reminder:
@@ -230,7 +230,7 @@ const pageStyle = computed(() => {
   // 1. If the quiz is completed and the final result has its own background image...
   if (quizCompleted.value && finalResult.value) {
     // ...use the result's specific background image.
-    imageUrl = new URL('../assets/marriott/Result Screen.png', import.meta.url).href
+    imageUrl = new URL('../assets/marriott/Result-Screen.png', import.meta.url).href
   } 
   // 2. If the quiz is in progress...
   else if (currentStep.value) {
