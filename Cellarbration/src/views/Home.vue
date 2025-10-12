@@ -32,7 +32,7 @@ const quizStart = (action) => {
 .start-container {
   /* position: fixed; */
   width: 100%;
-  min-height: 100dvh;
+  height: 100dvh;
   background-image: url('@/assets/images/Tanglin_Cellarbration_Start_Screen.png');
   background-repeat: no-repeat;
   /* background-size: 100dvw 100dvh; */
@@ -40,7 +40,8 @@ const quizStart = (action) => {
   background-position: center;
   background-attachment: fixed;
   scroll-behavior: smooth;
-  overflow-y: hidden;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .tanglinLogo {
@@ -49,7 +50,7 @@ const quizStart = (action) => {
   align-items: center;
   gap: 10px;
   width: 100%;
-  padding-top: 10vh;
+  padding-top: 5vh;
 }
 
 .tanglinLogo img {
@@ -70,7 +71,7 @@ const quizStart = (action) => {
 .mainText span {
   width: 50%;
   max-width: 350px;
-font-size: clamp(1.3rem, 1.8rem, 1.9rem);
+  font-size: clamp(1.3rem, 6dvw, 1.9rem);
 }
 
 .startBtn {
@@ -79,16 +80,7 @@ font-size: clamp(1.3rem, 1.8rem, 1.9rem);
   margin-top: 5dvh;
   width: 80%;
   max-width: 300px;
-  font-size: clamp(1.2rem, 1.9rem, 2rem);
+  font-size: clamp(1.2rem, 5dvw, 2rem);
 }
 
-@media (max-width: 375px) {
-.mainText span {
-    font-size: 1.2rem;
-}
-
-.startBtn {
-    font-size: 1.2rem;
-}
-}
 </style>
