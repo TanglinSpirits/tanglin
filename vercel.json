@@ -10,7 +10,7 @@
       "use": "@vercel/static-build"
     },
     {
-      "src": "Cellarbrations/package.json",
+      "src": "Cellarbration/package.json",
       "use": "@vercel/static-build"
     }
   ],
@@ -28,16 +28,16 @@
       "dest": "/Westin/index.html"
     },
     {
-      "src": "/cellarbrations/assets/(.*)",
-      "dest": "/Cellarbrations/assets/$1"
+      "src": "/cellarbration/assets/(.*)",
+      "dest": "/Cellarbration/assets/$1"
     },
     {
-      "src": "/cellarbrations/favicon/(.*)",
-      "dest": "/Cellarbrations/favicon/$1"
+      "src": "/cellarbration/favicon/(.*)",
+      "dest": "/Cellarbration/favicon/$1"
     },
     {
-      "src": "/cellarbrations.*",
-      "dest": "/Cellarbrations/index.html"
+      "src": "/cellarbration.*",
+      "dest": "/Cellarbration/index.html"
     },
     {
       "src": "/favicon/(.*)",
