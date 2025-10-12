@@ -47,7 +47,7 @@ const emit = defineEmits(['select-option'])
 }
 
 .choices-container {
-  font-family: "Benton Sans Book";
+  font-family: "Benton Sans Book", sans-serif;
   display: flex;
   flex-direction: column;
   gap: 3dvh;
