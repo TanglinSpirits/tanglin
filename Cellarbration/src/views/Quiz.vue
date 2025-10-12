@@ -23,21 +23,44 @@ const router = useRouter()
 
 // states
 const currentQuestion = ref(0)
+const answers = ref([])
 const finalResult = ref(null)
+const quizCompleted = ref(false)
 const isTransitioning = ref(false)
 
 const handleAnswer = (option) => {
-  // Store the answer
-  console.log('Selected option:', option)
+  if (isTransitioning.value) return // Prevent multiple clicks during transition
+  isTransitioning.value = true
   
-  // Move to the next question or show results
-  if (currentQuestion.value < questions.value.length - 1) {
-    currentQuestion.value++
-  } else {
-    finalResult.value = 'someResult' // Placeholder for actual result logic
-    router.push('/result') // Navigate to result page
-  }
+  answers.value.push(option.type)
+  console.log(answers.value)
+  
+  setTimeout(() => {
+    if (currentQuestion.value < questions.value.length - 1) {
+      currentQuestion.value++
+    } else {
+      finalResult.value = calculateResult() 
+      quizCompleted.value = true
+    }
+    isTransitioning.value = false
+  }, 500) 
 }
+
+const calculateResult = () => {
+  const typeCounts = answers.value.reduce((acc, type) => {
+    acc[type] = (acc[type] || 0) + 1
+    return acc
+  }, {})
+
+  const mostFrequentType = Object.keys(typeCounts).reduce((a, b) => {
+    return typeCounts[a] > typeCounts[b] ? a : b;
+  });
+
+  sessionStorage.setItem('quizResult', JSON.stringify(mostFrequentType));
+
+  return mostFrequentType
+} 
+
 </script>
 
 <style scoped>
@@ -58,5 +81,15 @@ const handleAnswer = (option) => {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.result-container {
+  background-color: black;
+  height: 100dvh;
+  max-width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 </style>
