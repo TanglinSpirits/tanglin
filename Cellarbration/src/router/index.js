@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
 import Quiz from '@/views/Quiz.vue'
+import Result from '@/views/Result.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,7 +11,7 @@ const router = createRouter({
       name: 'home',
       component: Home,
       meta: {
-        title: 'Tanglin X Cellarbrations',
+        title: 'Tanglin X Cellarbration',
       },
     },
     {
@@ -21,6 +22,14 @@ const router = createRouter({
         title: 'Cellarbration Quiz',
       },
     },
+    {
+      path: '/result',
+      name: 'result',
+      component: Result,
+      meta: {
+        title: 'Your Cellarbration Match',
+      },
+    }
   ],
 })
 
