@@ -15,7 +15,7 @@
         </div>
 
         <div class="button-container">
-            <button class="btn rounded-pill endBtn" @click="router.push('/')">
+            <button class="btn rounded-pill endBtn" @click="redirectTanglin">
                 DISCOVER TANGLIN GIN
             </button>
 
@@ -81,6 +81,10 @@ const preloadAssets = (assets) => {
       }
     }
   })
+}
+
+const redirectTanglin= () => {
+  window.open('https://www.instagram.com/tanglinginsg/', '_blank')
 }
 
 onMounted(() => {
