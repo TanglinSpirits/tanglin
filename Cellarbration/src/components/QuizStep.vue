@@ -39,11 +39,14 @@ const emit = defineEmits(['select-option'])
     padding: 5dvh 5dvw;
     margin-bottom: 5dvh;
     max-width: 500px;
+    min-height: 25dvh;
+    display: flex;
+    align-items: center;
 }
 
 .question-container h2 {
     font-size: 1.9rem;
-    margin: 0
+    margin: 0;
 }
 
 .choices-container {
@@ -60,7 +63,7 @@ const emit = defineEmits(['select-option'])
   background-color: white; /* Using yellow from your theme */
   border: none;
   border-radius: 20px;
-  min-height: 70px;
+  min-height: 80px;
   padding: 15px 20px;
   font-size: 1rem;
   color: black;

@@ -1,15 +1,15 @@
 <template>
   <!-- Question Screen -->
-  <div v-if="!finalResult" class="quiz-container">
+  <div class="quiz-container">
     <QuizStep 
-      :question="questions[currentQuestion]"
+      :question="currentQuestionData"
       :total-length="questions.length" 
       @select-option="handleAnswer" 
     />
   </div>
 
   <!-- Result screen -->
-  <div v-else class="result-container"></div>
+  <!-- <div v-else class="result-container"></div> -->
 </template>
 
 <script setup>
@@ -17,49 +17,57 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import QuizStep from '@/components/QuizStep.vue'
 import { questions } from '@/data.js'
+import { useAnswerStore } from '@/stores/answerStore'
+import { storeToRefs } from 'pinia'
+
+// Pinia stores
+const answerStore = useAnswerStore()
 
 // router
 const router = useRouter()
 
 // states
-const currentQuestion = ref(0)
+const { currentQuestionIndex, finalResult} = storeToRefs(answerStore)
+console.log("Current Question Index", currentQuestionIndex)
+const currentQuestionData = computed(() => {
+  return questions.value[currentQuestionIndex.value]
+})
+console.log("Question", questions.value[currentQuestionIndex.value])
+
+// const currentQuestion = ref(0)
 const answers = ref([])
-const finalResult = ref(null)
+// const finalResult = ref(null)
 const quizCompleted = ref(false)
 const isTransitioning = ref(false)
 
 const handleAnswer = (option) => {
   if (isTransitioning.value) return // Prevent multiple clicks during transition
   isTransitioning.value = true
-  
-  answers.value.push(option.type)
-  console.log(answers.value)
-  
-  setTimeout(() => {
-    if (currentQuestion.value < questions.value.length - 1) {
-      currentQuestion.value++
-    } else {
-      finalResult.value = calculateResult() 
-      quizCompleted.value = true
-    }
+
+  try {
+    const questionId = currentQuestionData.value.id
+    answerStore.selectAnswer(questionId, option.type)
+    answerStore.goToNextQuestion()
+  } finally {
     isTransitioning.value = false
-  }, 500) 
+  }
 }
 
-const calculateResult = () => {
-  const typeCounts = answers.value.reduce((acc, type) => {
-    acc[type] = (acc[type] || 0) + 1
-    return acc
-  }, {})
+const syncStateFromHistory = (event) => {
+  // Check if the state from the history event is valid
+  if (event.state && typeof event.state.questionIndex === 'number') {
+    // Call the action in the store to update the question index
+    answerStore.setQuestionIndex(event.state.questionIndex)
+  }
+}
 
-  const mostFrequentType = Object.keys(typeCounts).reduce((a, b) => {
-    return typeCounts[a] > typeCounts[b] ? a : b;
-  });
 
-  sessionStorage.setItem('quizResult', JSON.stringify(mostFrequentType));
-
-  return mostFrequentType
-} 
+onMounted(() => {
+  // Reset quiz state when component is mounted
+  answerStore.resetQuiz()
+  history.replaceState({questionIndex: 0}, '', '#question-1')
+  window.addEventListener('popstate', syncStateFromHistory)
+})
 
 </script>
 

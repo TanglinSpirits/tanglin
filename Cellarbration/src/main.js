@@ -10,8 +10,13 @@ inject()
 
 const app = createApp(App)
 const head = createHead()
+const pinia = createPinia()
 
-app.use(createPinia())
+pinia.use(({ store }) => {
+  store.router = router
+})
+
+app.use(pinia)
 app.use(head)
 app.use(router)
 
