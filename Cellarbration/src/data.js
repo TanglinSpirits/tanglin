@@ -16,7 +16,7 @@ import TT from '@/assets/result/TT.png'
 import SG from '@/assets/result/SG.png'
 import BP from '@/assets/result/BP.png'
 import OG from '@/assets/result/OG.png'
-// import SM from '@/assets/result/SM.png'
+import SM from '@/assets/result/SM.png'
 import CACAO from '@/assets/result/CACAO.png'
 
 export const imagesToPreload = [startScreen, quizScreen, tanglinLogo]
@@ -115,27 +115,26 @@ export const result = ref([TT, SG, BP, OG, CACAO])
 export const results = ref({
   TT: {
     image: TT,
-    text:"Test1",
     color: "#FFBD59"
   },
   SG: {
     image: SG,
-    text:"Test2",
     color: "#FF914D"
   },
   BP: {
     image: BP,
-    text:"Test3",
     color: "#FF0000"
   },
   OG: {
     image: OG,
-    text:"Test4",
     color: "#F04E99"
   },
   CACAO: {
     image: CACAO,
-    text:"Test5",
     color: "#FFD091"
+  },
+  SM: {
+    image: SM,
+    color: "#FFA26E"
   }
 })

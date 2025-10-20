@@ -11,7 +11,7 @@
         </div>
 
         <div class="text-container">
-            <span :style="{ color: resultColor}">Psst... craving something sweet?<br>Our Tanglin chocolate bars might just hit the spot.<br>Just ask the staff for one!</span>
+            <span :style="{ color: resultColor}">Psst... craving something sweet?<br>Our Tanglin Chocolate Bars might just hit the spot.<br>Just ask the staff for one!</span>
         </div>
 
         <div class="button-container">
