@@ -11,7 +11,7 @@
         </div>
 
         <div class="text-container">
-            <span :style="{ color: resultColor}">{{ resultText}}</span>
+            <span :style="{ color: resultColor}">Psst... craving something sweet?<br>Our Tanglin chocolate bars might just hit the spot.<br>Just ask the staff for one!</span>
         </div>
 
         <div class="button-container">
@@ -136,10 +136,10 @@ onMounted(() => {
 
 .text-container {
     margin-top: 3dvh;
-    width: 80%;
+    width: 90%;
     color: white;
     font-family: 'Anton', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.4;
     white-space: pre-wrap;
 }

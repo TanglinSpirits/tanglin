@@ -39,8 +39,8 @@ router.afterEach(() => {
 })
 
 useHead({
-  title: 'Tanglin X Cellarbration',
-  meta: [{ name: 'description', content: 'Tanglin X Cellarbration Quiz' }],
+  title: 'Tanglin Gin Personality Quiz',
+  meta: [{ name: 'description', content: 'Tanglin Gin Personality Quiz' }],
   link: [
     ...fontAssets.map((font) => ({
       rel: 'preload',
